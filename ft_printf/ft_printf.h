@@ -17,16 +17,16 @@
 # include <stdio.h>
 # include <unistd.h>
 # include <stdarg.h>
-# include "libft/libft.h"
 
 /***** MACRO *****/
 # define LHEXA "0123456789abcdef"
 # define UHEXA "0123456789ABCDEF"
 
 /***** MAİN FİLE ft_printf.c *****/
+int	ft_putchar(char c);
 int	ft_printf(const char *str, ...);
 int	ft_control(char kind, va_list list);
-int	ft_putchar(char c);
+void	*ft_memset(void *b, int c, size_t len);
 
 /***** FİLE ft_printf_utils.c *****/
 int	ft_putpoint(size_t n);

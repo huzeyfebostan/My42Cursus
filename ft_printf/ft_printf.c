@@ -17,6 +17,21 @@ int	ft_putchar(char c)
 	return (write(1, &c, 1));
 }
 
+void	*ft_memset(void *b, int c, size_t len)
+{
+	size_t			i;
+	unsigned char	*tmp;
+
+	i = 0;
+	tmp = (unsigned char *)b;
+	while (i < len)
+	{
+		tmp[i] = c;
+		i++;
+	}
+	return (tmp);
+}
+
 int	ft_control(char kind, va_list list)
 {
 	if (kind == 'c')

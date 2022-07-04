@@ -84,7 +84,7 @@ int	ft_puthex(unsigned int n, char *hex)
 
 	if (n == 0)
 		return (ft_putchar('0'));
-	ft_bzero (str, 16);
+	ft_memset (str, '\0', 16);
 	i = 0;
 	len = 0;
 	while (n)
@@ -96,10 +96,4 @@ int	ft_puthex(unsigned int n, char *hex)
 	while (i--)
 		len += write(1, &str[i], 1);
 	return (len);
-}
-
-int main()
-{
-	ft_printf("%asdbd",12);
-	printf("%dsdbd",12);
 }
